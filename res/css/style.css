@@ -12,11 +12,17 @@ body {
   line-height: 1.5;
   margin: 0; padding: 0;
 }
+@media only screen and (max-width: 600px) {
+  body {
+    padding-top: 10rem;
+    font-size: 1.4rem;
+  }
+}
 .container {
   width: 970px;
   margin: 0 auto;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 700px) {
   .container {
     width: 99%;
   }
@@ -39,15 +45,16 @@ header {
   z-index: 2;
 }
 header div {
-  width: 10rem;
-  margin-left: 2rem;
+  width: 3rem;
+  margin: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   opacity: .8;
 }
 header div img {
-  width: 3rem;
+  width: 100%;
+  margin-right: 2rem;
 }
 nav {
   margin-right: 2rem;
@@ -66,12 +73,41 @@ nav li {
 nav li a {
   color: hsla(0, 0%, 100%, 0.59);
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   header div span {
     display: none;
   }
   header div img {
     width: 1.4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  header, nav ul {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  header {
+    padding: 1rem 0;
+    position: absolute;
+  }
+  nav li {
+    width: 10rem;
+    margin: .3rem auto;
+    font-size: 1.5rem;
+  }
+  nav ul {
+    width: 90%;
+    margin: 0 auto;
+  }
+  nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+  header div {
+    width: 96%;
+    margin: 0 auto;
   }
 }
 
@@ -152,13 +188,13 @@ nav li a {
   background-color: rgb(182, 31, 217);
 }
 .red {
-  background-color: :rgb(221, 19, 34);
+  background-color: rgb(221, 19, 34);
 }
 /*Text Colors*/
-.green {
+.green-color {
   color: hsl(153, 69%, 48%);
 }
-.red {
+.red-color {
   color: hsl(344, 79%, 47%);
 }
 .box {
@@ -199,7 +235,7 @@ nav li a {
 .box .op {
   opacity: .3;
 }
-h1.food {
+h1.title {
   font-size: 2rem;
   margin: 1rem;
   font-weight: bold;
